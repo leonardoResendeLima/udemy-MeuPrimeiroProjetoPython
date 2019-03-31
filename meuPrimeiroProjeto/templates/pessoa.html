@@ -1,0 +1,22 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" >
+</head>
+<body>
+
+{% if v_idade is none or v_idade <= 0 %}
+    <div class="error">Pessoa não encontrada</div>
+{% else %}
+    Pessoa encontrada: Seu nome é {{v_nome}} e sua idade é {{v_idade}}
+{% endif %}
+
+</body>
+</html>
